@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to thefreelancevanguard</title>
+    <link rel="shortcut icon" href="logo1.jpg" type="image/x-icon">
+    <style>
+        ::-webkit-scrollbar{
+            display: none;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background-color: #000000;
+        }
+        .nav{
+            display: flex;
+        }
+        .nav h1{
+            color: #ffffff;
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .nav nav{
+            display: flex;
+            background-color: #ffffff;
+            /* justify-content:right; */
+            height: 60px;
+            width: 43%;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 10px;
+            /* left: 10px; */
+            right: 5px;
+            border-bottom-left-radius: 30px;
+
+        }
+        .nav nav a{
+            position: relative;
+            left: 30px;
+            color: black;
+            text-decoration: none;
+            margin: 40px;
+            font-size: large;
+            font-weight: bold;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        img{
+            margin: 5px 30px;
+        }
+        .mid-container{
+            height: 100vh;
+        }
+        .circle-1{
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-image:linear-gradient(#ae01eb, #5901fa);
+            position:absolute;
+            top: 150px;
+            left: 40px;
+        }
+        .circle-2{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-image:linear-gradient(#ae01eb, #5901fa);
+            position:absolute;
+            top: 400px;
+            left: 100px;
+        }.circle-3{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-image:linear-gradient(#ae01eb, #5901fa);
+            position:absolute;
+            top: 220px;
+            left: 490px;
+        }
+        .circle-4{
+            width: 190px;
+            height: 200px;
+            border-radius: 50%;
+            background-image:linear-gradient(#ae01eb, #5901fa);
+            position:absolute;
+            top: 350px;
+            left: 550px;
+        }
+        .rectangle{
+            color: #ffffff;
+            height: 300px;
+            width: 40%;
+            margin-left: 40px;
+            backdrop-filter: blur(20px);
+            font-size: larger;
+            font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            position: relative;
+            top: 190px;
+            border-radius: 20px;
+            text-align: justify;
+            justify-content: center;
+            align-items: center;
+            /* box-shadow: 200000px,rgba(181, 181, 181, 0.232); */
+        }
+        .rectangle h4, h3, p{
+            margin: 30px;
+        }
+        .rectangle h4{
+            font-size: 30px;
+        }
+        .rectangle h3{
+            font-size: 40px;
+        }
+        .rectangle .button1{
+            background-image:linear-gradient(#ae01eb, #5901fa);
+            padding: 15px;
+            font-size: larger;
+            color: #ffffff;
+            border-radius: 40px;
+            position: relative;
+            top: 100px;
+            left: 20px;
+            border: none;
+            width: 150px;
+            cursor: pointer;
+        }
+        .rectangle .scroll{
+            /* display: flex; */
+            /* background-image:linear-gradient(#ae01eb, #5901fa); */
+            padding: 15px;
+            /* background-color: #000000; */
+            font-size: larger;
+            color:#ffffff;
+            border-radius: 40px;
+            position: relative;
+            top: 100px;
+            left: 30px;
+            border: none;
+            width: 150px;
+            cursor: pointer;background-image:linear-gradient(#ae01eb, #5901fa);
+            /* border: 1px solid transparent; */
+            /* border-image: linear-gradient(#ae01eb, #5901fa);
+            border-image-slice: 1; */
+            border-radius: 40px;
+        }
+        .rectangle .scroll img{
+            width: 23px;
+            position: absolute;
+            left: -10px;
+            top: 10px;
+                }
+        .mid-container img{
+            position:absolute;
+            top: 20px;
+            right: 40px;
+        }
+        .services{
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+        }
+        .services span, .about-us span,.contact-us span{
+            font-size: 40px;
+            border-bottom: 5px solid #5901fa;
+            border-radius: 5px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .services>div{
+            margin-top: 100px;
+            display: flex;
+            overflow: scroll;
+
+        }
+        .services div div{
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            margin: 90px;
+            border-radius: 50px;
+            min-width: 22%;
+            min-height: 40vh;
+            transition: 1s;
+            backdrop-filter: blur(20px);
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            border:1px solid rgba(255, 255, 255, 0.18);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-align: justify;
+        }
+        .services button{
+            background-image:linear-gradient(#ae01eb, #5901fa);
+            padding: 10px;
+            font-size: larger;
+            color: #ffffff;
+            position: relative;
+            margin-left: 100px;
+            border-radius: 40px;
+            border: none;
+            cursor: pointer;
+        }
+        .services p{
+            margin: 20px;
+        }
+        .web-development:hover,.web-design:hover,.graphic-design:hover, .android-development:hover{
+            transform: scale(1.3);
+            /* border: 3px solid rgba(255, 255, 255, 0.432); */
+            transition: 1s;
+            box-shadow:10px 10px 30px #ffffff4e;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.432), rgba(255, 255, 255, 0));
+
+        }
+
+        hr{
+            width: 30px;
+            border-style: dotted;
+            border-bottom: 0;
+            border-width: 10px;
+            color: lightgrey;
+        }
+
+        .about-us, .contact-us{
+            text-align: center;
+            color: #ffffff;
+            margin-top: 70px;
+        }
+
+        .about-us{
+            position: relative;
+        }
+       
+        .about-us div{
+            margin: 10%;
+            text-align: justify;
+            width: 80%;
+            background-image: url('background-logo.jpg');
+            background-size:1250px;
+            background-position: center;
+            height: 70vh;
+            border-radius: 20px;
+            box-shadow: 2px 2px 1px #ae01eb;
+
+        }
+        .about-us h3 {
+            text-align: center;
+            position: relative;
+            top: 50px;
+            font-size: 40px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+        }
+        .about-us p{
+            margin: 100px 20px;
+            font-size: xx-large;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .about-us p a{
+            text-decoration: none;
+            color: #ffffff;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .contact-us>div{
+            margin-top: 100px;
+            display: flex;
+            overflow: scroll;
+        }
+        .contact-us div  div {
+            /* background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)); */
+            /* border:1px solid rgba(255, 255, 255, 0.18); */
+            border: 1px solid #ffffff;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            margin: 90px;
+            border-radius: 50px;
+            min-width: 22%;
+            min-height: 40vh;
+            transition: 1s;
+            backdrop-filter: blur(20px);
+            /* filter: blur(2px); */
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            border:1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 2px 2px 2px #ae01eb;
+
+        }
+        .contact-us .instagram{
+            background-image: url('Instagram_logo_2016.png');
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 350px;
+            background-color: #b2acac55;
+
+        }
+        .contact-us .google{
+            background-image: url('google.png');
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+            background-color: #ffffff;
+
+
+        }
+        .contact-us .linkdedin{
+            background-image: url('linkedin.png');
+            background-repeat: no-repeat;
+            background-size: 400px;
+            background-position: center;
+
+        }
+        .contact-us .fiver{
+            background-image: url('fiver.png');
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        footer{
+            text-align: center;
+            background-color: #272626;
+            position: relative;
+        }
+        footer img{
+            margin-top: 70px;
+            border-radius: 50%;
+            width: 15%;
+        }
+        .footer{
+            display: flex;
+        }
+        .footer div{
+            display: flex;
+            flex-direction: column;
+            width: 30%;
+            margin: 25px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .footer div h3{
+            color: #ffffff;
+            font-size: 35px;
+        }
+        .footer div a{
+            text-decoration: none;
+            color: #ffffff;
+            margin: 10px;
+            font-size: 30px;
+            padding: 0;
+        }
+        .footer div a:hover{
+            color: gold;
+        }
+
+        @media screen and (min-width:400px) and (max-width:500px) {
+            .nav img{
+                margin: 10px 10px;
+                width:90px ;
+                height: 70px;
+            }
+            .nav nav{
+                width: 10%;
+                display: none;
+            }
+            .nav h1{
+                margin-top: 30px;
+                font-size: 20px;
+            }
+            hr{
+                display: none;
+            }
+            .circle-1{
+                width: 100px;
+                height: 100px;
+            }
+            .circle-3{
+                left: 60%;
+            }
+            .circle-4{
+                left:80%;
+                width: 90px;
+                height: 100px;
+            }
+            .rectangle {
+                width:80%;
+                height: 250px;
+                border-radius: 40px;
+            }
+            .rectangle h3{
+                font-size: 25px;
+            }
+            .rectangle h4{
+                font-size: 20px;
+            }
+            .rectangle p{
+                font-size: 15px;
+                line-height: 30px;
+            }
+            .rectangle .button1, .rectangle .scroll{
+                top: 30px;
+                width: 100px;
+                height: 50px;
+                font-size: 15px;
+                padding: 5px;
+            }
+            .mid-container img{
+                display: none;
+            }
+            .services>div {
+                flex-wrap: wrap;
+                overflow: auto;
+            }
+            .services{
+                bottom: 150px;
+            }
+            .services div div{
+                margin: 20px;
+                min-width: 170px;
+                min-height: auto;
+                text-align: center;
+                align-items: center;
+                justify-content: center;
+            }
+            .web-development:hover,.web-design:hover,.graphic-design:hover, .android-development:hover{
+                transform: scale(1);
+            }
+            .services button{
+                display: none;
+            }
+            .services h3{
+                font-size:10px;
+            }
+            .services p{
+                display: none;
+            }
+
+            .about-us{
+                bottom: 150px;
+            }
+
+            .about-us div{
+                margin: 40px 40px;
+                height: 240px;
+                background-size:400px;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+            .about-us div h3{
+                font-size: 26px;
+                top: 20px;
+            }
+            .about-us div p {
+                font-size: 20px;
+                margin: 50px 20px;
+            }
+            .contact-us{
+                display: none;
+            }
+            footer{
+                bottom: 100px;
+            }
+            footer img{
+                margin-top: 70px;
+                width: 20%;
+            }
+
+            .footer div{
+                width: 30%;
+                margin: 5px;
+            }
+
+            .footer div h3{
+                font-size: 20px;
+            }
+
+            .footer div a{
+                margin: 3px 5px;
+                font-size: 13px;
+                padding: 0;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="nav">
+            <img src="freelance.png" width="120px" height="120px" alt="">
+            <h1>The Freelance Vanguard</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="#service">Service</a>
+                <a href="#contact-us">Contact us</a>
+                <a href="#about-us">About us</a>
+            </nav>
+        </div>
+        <div class="mid-container" style="position: relative;">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
+            <div class="circle-4"></div>
+            <img src="logo.png" alt="">
+            <div class="rectangle">
+                <h4>Hello!</h4>
+                <h3>The Freelance Vanguard</h3>
+                <p>A software as a service (Sas) provider which converts your imagiation into reality</p>
+                <button class="button1">Hire us</button>
+                <button class="scroll"><img src="icons8-down-arrow-50.png" alt="">Scroll</button>
+                
+            </div>
+        </div>
+
+        <div class="services" id="service">
+            <span>Services</span>
+
+            <div>
+                <div class="web-development" id="web-development" >
+                    <h3>Web Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis porro nemo laudantium, vel fugiat voluptatibus aut quis, asperiores voluptas facilis itaque? Cumque aspernatur debitis est cupiditate. Vitae magni neque minima.</p>
+                    <button>Know More</button>
+                </div>
+                <div  class="web-design" id="web-design">
+                    <h3>Web Design</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam exercitationem quidem, libero eligendi quod nam similique tempora aliquam inventore totam nihil maxime, tempore cupiditate</p>
+                    <button>Know More</button>
+                </div>
+                <div class="graphic-design" id="graphic-design">
+                    <h3>Graphic Design</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et sed deleniti ratione sint distinctio ducimus, ea quia ipsam velit quasi exercitationem eveniet fuga neque, obcaecati, ex nostrum reprehenderit labore natus?</p>
+                    <button>Know More</button>
+                </div>
+                <div class="android-development" id="android-development">
+                    <h3>Android Development</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem qui consectetur eius, vitae quae quidem optio laboriosam quas nulla laborum dolore earum necessitatibus soluta eveniet ex alias consequatur fugit esse?</p>
+                    <button>Know More</button>
+                </div>
+            </div>
+            <hr>
+        </div>
+
+        <div class="about-us" id="about-us">
+            <span>About us</span>
+            <div>
+                <h3>The Freelance Vanguard</h3>
+                <p>A Software as a Service (SaaS) provider which converts your imagination into reality. We are work together to build new world.... <a href="">Learn more.</a></p>
+            </div>
+        </div>
+        <div class="contact-us" id="contact-us">
+            <span>Contact us</span>
+            <div>
+                <div class="instagram" src="https://instagram.com" >
+                    
+                </div>
+                <div  class="google">
+                    
+                </div>
+                <div class="linkdedin">
+                    
+                </div>
+                <div class="fiver">
+                    
+                </div>
+            </div>
+            <hr>
+        </div>
+        <footer>
+            <img src="logo1.jpg" alt="">
+            <div class="footer">
+                <div>
+                    <h3>Archiact</h3>
+                    <a href="index.html">Home</a>
+                    <a href="#service">Service</a>
+                    <a href="#about-us">About us</a>
+                    <a href="#contact-us">Contact us</a>
+                </div>
+                <div>
+                    <h3>Service</h3>
+                    <a href="#web-development">Web Development</a>
+                    <a href="#web-design">Web Design</a>
+                    <a href="#android-development">Android Development</a>
+                    <a href="#graphic-design">Graphic Design</a>
+                </div>
+                <div>
+                    <h3>Contact</h3>
+                    <a href="#">Instagram</a>
+                    <a href="mailto:thefreelancevanguard23@gmail.com">Gmail</a>
+                    <a href="https://www.linkedin.com/in/the-freelance-vanguard-a92273263?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Ba4h9h8GuQcGJvr%2Fke1osLw%3D%3D" target="_blank">Linkdedin</a>
+                    <a href="#">Fiverr</a>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
